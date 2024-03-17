@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-1: hsl(212, 13%, 36%);
+  --primary-2: hsl(208, 12%, 58%);
+  --primary-3: hsl(208, 13%, 90%);
+
+  --secondary-3: hsl(33, 23%, 56%);
+  --secondary-4: hsl(40, 64%, 83%);
+  --secondary-5: hsl(40, 33%, 94%);
+
+  --black: hsl(211, 13%, 9%);
+  --white: hsl(0, 0%, 100%);
+  --navbg: #00000020;
+  /* --navbg: rgba(128,32,96,0.6); */
+}
+
+@layer components {
+  /* .body-hero {
+    color: var(--gold-gold, #c9bdab);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1.55531rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18663rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+
+  .main-hero {
+    color: var(--White, #fff);
+    text-align: center;
+    text-shadow: 0px 4.977099418640137px 49.77099609375px rgba(0, 0, 0, 0.35);
+    font-family: Rufina;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 6.25rem;
+    letter-spacing: -0.0625rem;
+    text-transform: uppercase;
+  }
+
+  .layout {
+    display: flex;
+    padding: 0.62213rem 1.86644rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.77769rem;
+    border-radius: 0rem 0.3125rem 0.3125rem 0.3125rem;
+    background: rgba(255, 255, 255, 0.94);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .layout .body-hero {
+    color: var(--gold-gold, #c9bdab);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1.55531rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18663rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media screen and (max-width: 769px) {
+    .main-hero {
+      color: var(--White, #fff);
+      text-align: center;
+      text-shadow: 0px 4.977099418640137px 49.77099609375px rgba(0, 0, 0, 0.35);
+      font-family: Rufina;
+      font-size: 2.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 3.25rem;
+      /* 118.182% */
+      letter-spacing: -0.0625rem;
+      text-transform: uppercase;
+    }
+
+    .layout .body-hero {
+      color: var(--primary-gold-dark, #5b656f);
+      text-align: center;
+      font-family: Raleway;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.105rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .playfair {
+    font-family: "Playfair Display", serif;
+  }
+
+  .raleway {
+    font-family: "Raleway", sans-serif;
+  }
+
+  .rufina {
+    font-family: "Rufina", serif;
+  }
+
+  .accent {
+    @apply rufina uppercase text-base leading-6 tracking-[0.125rem];
+  }
+
+  .italic {
+    @apply playfair font-medium italic text-xl leading-8 md:text-[2rem] md:leading-[3.5rem];
+  }
+
+  .body-hero {
+    @apply raleway text-lg leading-7 md:text-2xl md:leading-[2.5rem];
+  }
+
+  .body {
+    @apply raleway leading-6;
+  }
+
+  .body-bold {
+    @apply raleway font-bold leading-6;
+  }
+
+  /* buttons */
+
+  .btn-lg {
+    @apply w-[5.75rem] h-12 px-5 py-3 bg-gray-600 rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] justify-center items-center gap-2 inline-flex text-white text-base font-semibold raleway uppercase leading-normal;
+  }
+
+  .btn-sm {
+    @apply w-[86px] h-10 px-4 py-2 bg-gray-600 rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex text-white text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-lg:hover {
+    @apply w-[5.75rem] h-12 px-5 py-3 bg-gray-400 rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] justify-center items-center gap-2 inline-flex text-white text-base font-semibold raleway uppercase leading-normal;
+  }
+
+  .btn-sm:hover {
+    @apply w-[86px] h-10 px-4 py-2 bg-gray-400 rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex text-white text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-lg {
+    @apply w-[5.75rem] h-12 px-5 py-3 bg-white rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] border border-gray-600 justify-center items-center gap-2 inline-flex text-gray-600 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-sm {
+    @apply w-[86px] h-10 px-4 py-2 bg-white rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex border border-gray-600 text-gray-600 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-lg:hover {
+    @apply w-[5.75rem] h-12 px-5 py-3 bg-white rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] border border-gray-400 justify-center items-center gap-2 inline-flex text-gray-400 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-sm:hover {
+    @apply w-[86px] h-10 px-4 py-2 bg-white rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] border border-gray-400 justify-center items-center gap-1 inline-flex text-gray-400 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  /* long buttons */
+
+  .btn-lng-lg {
+    @apply w-[7.25rem] h-12 px-4 py-3 bg-gray-600 rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] justify-center items-center gap-2 inline-flex text-white text-base font-semibold raleway uppercase leading-normal;
+  }
+
+  .btn-lng-sm {
+    @apply w-[6.875rem] h-10 px-4 py-2 bg-gray-600 rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex text-white text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-lng-lg:hover {
+    @apply w-[7.25rem] h-12 px-5 py-3 bg-gray-400 rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] justify-center items-center gap-2 inline-flex text-white text-base font-semibold raleway uppercase leading-normal;
+  }
+
+  .btn-lng-sm:hover {
+    @apply w-[6.875rem] h-10 px-4 py-2 bg-gray-400 rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex text-white text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-lg {
+    @apply w-[7.25rem] h-12 px-5 py-3 bg-white rounded-tr-[0.625rem] rounded-bl-[0.625rem] rounded-br-[0.625rem] border border-gray-600 justify-center items-center gap-2 inline-flex text-gray-600 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-sm {
+    @apply w-[106px] h-10 px-4 py-2 bg-white rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] justify-center items-center gap-1 inline-flex border border-gray-600 text-gray-600 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-lg:hover {
+    @apply w-[7.25rem] h-12 px-5 py-3 bg-white rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] border border-gray-400 justify-center items-center gap-2 inline-flex text-gray-400 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .btn-ghost-sm:hover {
+    @apply w-[106px] h-10 px-4 py-2 bg-white rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] border border-gray-400 justify-center items-center gap-1 inline-flex text-gray-400 text-base font-semibold font-['Raleway'] uppercase leading-normal;
+  }
+
+  .grad {
+    @apply bg-gradient-to-b from-black to-black blur-[250px];
+  }
+
+  .mainSlider .swiper-pagination-bullets {
+    bottom: 1.5rem;
+  }
+
+  .mainSlider .swiper-pagination-bullet,
+  .productSlider .swiper-pagination-bullet {
+    background: #ea9648;
+  }
+
+  .productSlider .swiper-button-prev::after {
+    font-size: 2rem;
+  }
+
+  .productSlider .swiper-button-prev::after,
+  .productSlider .swiper-button-next::after {
+    font-size: 2rem;
+    color: #ea9648;
+    padding: 1rem;
+    width: 300px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#f5f3f1] overflow-x-hidden;
+  }
+
+  /* h1 {
+    @apply rufina font-bold text-[2.75rem] leading-[3.25rem] md:text-6xl md:leading-[4.5rem];
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+}
+
+/* h2 {
+    @apply rufina font-bold text-4xl leading-[2.75rem] md:text-[3.25rem] md:leading-[4rem];
+  }
+
+  h3 {
+    @apply rufina font-bold text-[1.75rem] leading-[2.25rem] md:text-[2.75rem] md:leading-[3.5rem];
+  }
+
+  h4 {
+    @apply rufina font-bold text-xl leading-[1.5rem] md:text-4xl md:leading-[2.75rem];
+   
+  }
+
+  h5 {
+    @apply rufina font-bold md:text-[1.75rem] leading-[2.25rem];
+  }
+} */
